@@ -23,8 +23,7 @@ filename=make_filename(2013)
 print(filename)
 df=fars_read(filename)
 head(df)
-#choose one of those numbers
-unique(df$STATE)
+
 fars_map_state(10,2013)
 ```
 
