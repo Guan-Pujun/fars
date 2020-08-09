@@ -1,0 +1,30 @@
+---
+title: "Introduction_to_fars"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_to_fars}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fars)
+```
+#This is an example of how to use fars.
+```{r}
+filename=make_filename(2013)
+print(filename)
+df=fars_read(filename)
+head(df)
+#choose one of those numbers
+unique(df$STATE)
+fars_map_state(10,2013)
+```
+
